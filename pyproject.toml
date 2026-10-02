@@ -1,0 +1,23 @@
+[project]
+name = "grid-asset-qa"
+version = "1.0.0"
+description = "Test automation portfolio project: a grid asset register API and UI with a layered test suite"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+filterwarnings = ["ignore:Using `httpx` with `starlette.testclient`"]
+markers = [
+    "smoke: fast checks of the critical paths, run first in CI",
+    "regression: guards against a known defect class coming back",
+    "e2e: browser tests with Playwright (slower, run as a separate CI stage)",
+]
+
+[tool.coverage.run]
+source = ["app"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 90
