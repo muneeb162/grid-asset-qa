@@ -1,6 +1,6 @@
 # Grid Asset Register: test automation project
 
-![tests](https://github.com/YOUR-USERNAME/grid-asset-qa/actions/workflows/tests.yml/badge.svg)
+![tests](https://github.com/muneeb162/grid-asset-qa/actions/workflows/tests.yml/badge.svg)
 
 A small register for electricity grid assets (transformers, cables, substations) with outage tracking and a GeoJSON export, built as the target for a layered test suite.
 
